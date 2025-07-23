@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Adicionar tabela usuario</comment>
+        <createSequence sequenceName="usuario_id_seq" startValue="1" incrementBy="1" />
+        <createTable tableName="usuario">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="hash_senha" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="campus_id" type="int">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        <addForeignKeyConstraint
+            baseTableName="usuario"
+            baseColumnNames="campus_id"
+            referencedTableName="campus"
+            referencedColumnNames="id"
+            constraintName="fk_usuario_campus" />
+    </changeSet>
+</databaseChangeLog>

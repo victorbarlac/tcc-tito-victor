@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Criar tabela de domínio fixo estado_acompanhamento e tabela de junção acompanhamento_medico</comment>
+        <createTable tableName="estado_acompanhamento">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="descricao" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="acompanhamento_medico">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profissional_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="estado_acompanhamento_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="acompanhamento_medico" columnNames="aluno_id,profissional_id,estado_acompanhamento_id" constraintName="pk_acompanhamento_medico"/>
+        <addForeignKeyConstraint 
+            baseTableName="acompanhamento_medico" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_acompanhamento_medico_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="acompanhamento_medico" 
+            baseColumnNames="profissional_id" 
+            referencedTableName="profissional_saude" 
+            referencedColumnNames="id" 
+            constraintName="fk_acompanhamento_medico_profissional"/>
+        <addForeignKeyConstraint 
+            baseTableName="acompanhamento_medico" 
+            baseColumnNames="estado_acompanhamento_id" 
+            referencedTableName="estado_acompanhamento" 
+            referencedColumnNames="id" 
+            constraintName="fk_acompanhamento_medico_estado_acompanhamento"/>
+    </changeSet>
+</databaseChangeLog>

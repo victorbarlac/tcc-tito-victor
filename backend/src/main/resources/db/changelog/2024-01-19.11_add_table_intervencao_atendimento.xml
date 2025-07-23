@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <createTable tableName="intervencao">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="data" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="local" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_intervencao_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="encaminhador_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+            <column name="encaminhamento_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="demanda_inicial_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="objetivo_intervencao_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint 
+            baseTableName="intervencao" 
+            baseColumnNames="tipo_intervencao_id" 
+            referencedTableName="tipo_intervencao" 
+            referencedColumnNames="id" 
+            constraintName="fk_intervencao_tipo_intervencao"/>
+        <addForeignKeyConstraint 
+            baseTableName="intervencao" 
+            baseColumnNames="encaminhador_id" 
+            referencedTableName="encaminhador" 
+            referencedColumnNames="id" 
+            constraintName="fk_intervencao_encaminhador"/>
+        <addForeignKeyConstraint 
+            baseTableName="intervencao" 
+            baseColumnNames="encaminhamento_id" 
+            referencedTableName="encaminhamento" 
+            referencedColumnNames="id" 
+            constraintName="fk_intervencao_encaminhamento"/>
+        <addForeignKeyConstraint 
+            baseTableName="intervencao" 
+            baseColumnNames="demanda_inicial_id" 
+            referencedTableName="demanda_inicial" 
+            referencedColumnNames="id" 
+            constraintName="fk_intervencao_demanda_inicial"/>
+        <addForeignKeyConstraint 
+            baseTableName="intervencao" 
+            baseColumnNames="objetivo_intervencao_id" 
+            referencedTableName="objetivo_intervencao" 
+            referencedColumnNames="id" 
+            constraintName="fk_intervencao_objetivo_intervencao"/>
+        <createTable tableName="atendimento">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intervencao_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint 
+            baseTableName="atendimento" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_atendimento_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="atendimento" 
+            baseColumnNames="intervencao_id" 
+            referencedTableName="intervencao" 
+            referencedColumnNames="id" 
+            constraintName="fk_atendimento_intervencao"/>
+    </changeSet>
+</databaseChangeLog>

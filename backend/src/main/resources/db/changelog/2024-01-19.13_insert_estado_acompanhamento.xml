@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="victorbarlac">
+        <insert tableName="estado_acompanhamento">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Em andamento"/>
+        </insert>
+        <insert tableName="estado_acompanhamento">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Nunca realizado"/>
+        </insert>
+        <insert tableName="estado_acompanhamento">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Já realizado"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

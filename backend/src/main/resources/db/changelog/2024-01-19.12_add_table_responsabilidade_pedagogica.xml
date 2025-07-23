@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="3" author="victorbarlac">
+        <createTable tableName="responsabilidade_psicopedagogica">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="usuario_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint 
+            baseTableName="responsabilidade_psicopedagogica" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_responsabilidade_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="responsabilidade_psicopedagogica" 
+            baseColumnNames="usuario_id" 
+            referencedTableName="usuario" 
+            referencedColumnNames="id" 
+            constraintName="fk_responsabilidade_usuario"/>
+    </changeSet>
+</databaseChangeLog>

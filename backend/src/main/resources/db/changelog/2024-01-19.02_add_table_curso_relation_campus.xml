@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Criar tabela curso e relação N:N com campus</comment>
+        <createSequence sequenceName="curso_id_seq" startValue="1" incrementBy="1"/>
+        <createTable tableName="curso">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="campus_curso">
+            <column name="campus_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="curso_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="campus_curso" columnNames="campus_id,curso_id" constraintName="pk_campus_curso"></addPrimaryKey>
+        <addForeignKeyConstraint 
+            baseTableName="campus_curso" 
+            baseColumnNames="campus_id" 
+            referencedTableName="campus" 
+            referencedColumnNames="id" 
+            constraintName="fk_campus_curso_campus"/>
+        <addForeignKeyConstraint 
+            baseTableName="campus_curso" 
+            baseColumnNames="curso_id" 
+            referencedTableName="curso" 
+            referencedColumnNames="id" 
+            constraintName="fk_campus_curso_curso"/>
+    </changeSet>
+</databaseChangeLog>

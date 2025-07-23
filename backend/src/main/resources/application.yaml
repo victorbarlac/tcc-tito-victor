@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "RAPE IFES"
+  liquibase:
+    changelog: "classpath:db/master.xml"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bd-rape
+    username: rape
+    password: senha123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

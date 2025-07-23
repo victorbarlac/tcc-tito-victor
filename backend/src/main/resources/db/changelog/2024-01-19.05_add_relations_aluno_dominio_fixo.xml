@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Adicionar chaves estrangeiras na tabela aluno</comment>
+        <addColumn tableName="aluno">
+            <column name="etnia_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <addColumn tableName="aluno">
+            <column name="genero_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <addColumn tableName="aluno">
+            <column name="orientacao_sexual_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <addColumn tableName="aluno">
+            <column name="curso_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint 
+            baseTableName="aluno" 
+            baseColumnNames="etnia_id" 
+            referencedTableName="etnia" 
+            referencedColumnNames="id" 
+            constraintName="fk_aluno_etnia"/>
+        <addForeignKeyConstraint 
+            baseTableName="aluno" 
+            baseColumnNames="genero_id" 
+            referencedTableName="genero" 
+            referencedColumnNames="id" 
+            constraintName="fk_aluno_genero"/>
+        <addForeignKeyConstraint 
+            baseTableName="aluno" 
+            baseColumnNames="orientacao_sexual_id" 
+            referencedTableName="orientacao_sexual" 
+            referencedColumnNames="id" 
+            constraintName="fk_aluno_orientacao_sexual"/>
+        <addForeignKeyConstraint 
+            baseTableName="aluno" 
+            baseColumnNames="curso_id" 
+            referencedTableName="curso" 
+            referencedColumnNames="id" 
+            constraintName="fk_aluno_curso"/>
+        <addColumn tableName="curso">
+            <column name="tipo_curso_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint 
+            baseTableName="curso" 
+            baseColumnNames="tipo_curso_id" 
+            referencedTableName="tipo_curso" 
+            referencedColumnNames="id" 
+            constraintName="fk_curso_tipo_curso"/>
+    </changeSet>
+
+</databaseChangeLog>

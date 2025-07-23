@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Criar tabelas de domínio fixo e relação N:N entre aluno, profissional de saúde e condição diagnosticada</comment>
+        <createTable tableName="condicao_diagnosticada">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="descricao" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="profissional_saude">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="descricao" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="diagnostico_condicao">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profissional_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="condicao_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="diagnostico_condicao" columnNames="aluno_id,profissional_id,condicao_id" constraintName="pk_diagnostico_condicao"/>
+        <addForeignKeyConstraint 
+            baseTableName="diagnostico_condicao" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_diagnostico_condicao_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="diagnostico_condicao" 
+            baseColumnNames="profissional_id" 
+            referencedTableName="profissional_saude" 
+            referencedColumnNames="id" 
+            constraintName="fk_diagnostico_condicao_profissional"/>
+        <addForeignKeyConstraint 
+            baseTableName="diagnostico_condicao" 
+            baseColumnNames="condicao_id" 
+            referencedTableName="condicao_diagnosticada" 
+            referencedColumnNames="id" 
+            constraintName="fk_diagnostico_condicao_condicao"/>
+    </changeSet>
+    <changeSet id="2" author="victorbarlac">
+        <comment>Criar tabela de junção prescricao_medicamento para relação N:N entre aluno, medicamento e profissional de saúde</comment>
+        <createSequence sequenceName="medicamento_id_seq" startValue="1" incrementBy="1"/>
+        <createTable tableName="medicamento">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nome_substancia" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exemplos_medicamentos" type="text">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <createTable tableName="prescricao_medicamento">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="medicamento_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profissional_id" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="prescricao_medicamento" columnNames="aluno_id, medicamento_id, profissional_id"/>
+        <addForeignKeyConstraint 
+            baseTableName="prescricao_medicamento" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_prescricao_medicamento_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="prescricao_medicamento" 
+            baseColumnNames="medicamento_id" 
+            referencedTableName="medicamento" 
+            referencedColumnNames="id" 
+            constraintName="fk_prescricao_medicamento_medicamento"/>
+        <addForeignKeyConstraint 
+            baseTableName="prescricao_medicamento" 
+            baseColumnNames="profissional_id" 
+            referencedTableName="profissional_saude" 
+            referencedColumnNames="id" 
+            constraintName="fk_prescricao_medicamento_profissional"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Criar tabela aluno</comment>
+        <createSequence sequenceName="aluno_id_seq" startValue="1" incrementBy="1"/>
+        <createTable tableName="aluno">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nome_social" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="data_nascimento" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telefone" type="varchar(15)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="recebe_auxilio" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="familia_recebe_assistencia_social" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="acompanhamento_psico_anterior" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

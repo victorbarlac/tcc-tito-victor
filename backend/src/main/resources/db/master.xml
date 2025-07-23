@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <include file="changelog/2024-01-19.00_add_table_campus.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.01_add_table_usuario.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.02_add_table_curso_relation_campus.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.03_add_table_aluno.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.04_add_tables_dominio_fixo.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.05_add_relations_aluno_dominio_fixo.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.06_add_tables_entidades_fracas_aluno_medicamento.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.07_add_table_tipo_intervencao.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.08_add_tables_diagnostico.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.09_add_tables_acompanhamento_medico.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.10_add_tables_dominio_fixo_intervencao.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.11_add_table_intervencao_atendimento.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.12_add_table_responsabilidade_pedagogica.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2024-01-19.13_insert_estado_acompanhamento.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

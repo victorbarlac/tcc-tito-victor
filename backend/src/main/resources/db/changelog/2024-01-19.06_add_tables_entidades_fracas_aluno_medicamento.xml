@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="victorbarlac">
+        <comment>Criar tabelas coabitante e contato emergencial</comment>
+        <createTable tableName="contato_emergencial">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nome_responsavel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telefone_responsavel" type="varchar(15)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint tableName="contato_emergencial" columnNames="aluno_id,nome_responsavel" constraintName="unique_contato_emergencial"/>
+        <createTable tableName="coabitante">
+            <column name="aluno_id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="descricao" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint tableName="coabitante" columnNames="aluno_id,descricao" constraintName="unique_coabitante"/>
+        <addForeignKeyConstraint 
+            baseTableName="coabitante" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_coabitante_aluno"/>
+        <addForeignKeyConstraint 
+            baseTableName="contato_emergencial" 
+            baseColumnNames="aluno_id" 
+            referencedTableName="aluno" 
+            referencedColumnNames="id" 
+            constraintName="fk_contato_emergencial_aluno"/>
+    </changeSet>
+</databaseChangeLog>
