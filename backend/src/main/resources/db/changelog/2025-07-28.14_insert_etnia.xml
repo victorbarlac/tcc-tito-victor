@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="victorbarlac">
+
+        <insert tableName="etnia">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Branco"/>
+        </insert>
+
+        <insert tableName="etnia">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Negro"/>
+        </insert>
+
+        <insert tableName="etnia">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Pardo"/>
+        </insert>
+
+        <insert tableName="etnia">
+            <column name="id" valueNumeric="4"/>
+            <column name="descricao" value="Indígena"/>
+        </insert>
+
+        <insert tableName="etnia">
+            <column name="id" valueNumeric="5"/>
+            <column name="descricao" value="Amarelo"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

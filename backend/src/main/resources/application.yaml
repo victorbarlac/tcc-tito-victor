@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   application:
     name: "RAPE IFES"
@@ -5,8 +7,8 @@ spring:
     changelog: "classpath:db/master.xml"
   datasource:
     url: jdbc:postgresql://localhost:5432/bd-rape
-    username: rape
-    password: senha123
+    username: postgres
+    password: 123
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

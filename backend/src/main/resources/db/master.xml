@@ -18,4 +18,8 @@
     <include file="changelog/2024-01-19.11_add_table_intervencao_atendimento.xml" relativeToChangelogFile="true"/>
     <include file="changelog/2024-01-19.12_add_table_responsabilidade_pedagogica.xml" relativeToChangelogFile="true"/>
     <include file="changelog/2024-01-19.13_insert_estado_acompanhamento.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-07-28.14_insert_etnia.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-07-28.15_insert_genero.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-07-28.16_insert_orientacao_sexual.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
