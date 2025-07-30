@@ -1,6 +1,6 @@
 package br.org.rapeifes.repository;
 
-import br.org.rapeifes.model.Etnia;
+import br.org.rapeifes.domain.Etnia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

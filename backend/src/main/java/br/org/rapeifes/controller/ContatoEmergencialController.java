@@ -30,7 +30,7 @@ public class ContatoEmergencialController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Long id) {
+    public void deletar(@PathVariable Integer id) {
         service.deletar(id);
     }
 }

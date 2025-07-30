@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ListaAlunoDTO {
 
-    private Long id;
+    private Integer id;
 
     private String nome;
 

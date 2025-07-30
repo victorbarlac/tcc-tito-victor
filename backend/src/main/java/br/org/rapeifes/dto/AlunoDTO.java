@@ -6,7 +6,7 @@ import java.time.LocalDate;
 @Data
 public class AlunoDTO {
 
-    private Long id;
+    private Integer id;
 
     private String nome;
 
@@ -24,13 +24,13 @@ public class AlunoDTO {
 
     private Boolean acompanhamentoPsicoAnterior;
 
-    private Long etniaId;
+    private Integer etniaId;
     private String descricaoEtnia;
 
-    private Long generoId;
+    private Integer generoId;
     private String descricaoGenero;
 
-    private Long orientacaoSexualId;
+    private Integer orientacaoSexualId;
     private String descricaoOrientacaoSexual;
 
 }

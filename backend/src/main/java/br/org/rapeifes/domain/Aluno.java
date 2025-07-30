@@ -50,4 +50,20 @@ public class Aluno {
 
     @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Coabitante> coabitantes = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "etnia_id", referencedColumnName = "id")
+    private Etnia etnia;
+
+    @ManyToOne
+    @JoinColumn(name = "genero_id", referencedColumnName = "id")
+    private Genero genero;
+
+    @ManyToOne
+    @JoinColumn(name = "orientacao_sexual_id", referencedColumnName = "id")
+    private OrientacaoSexual orientacaoSexual;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "curso_id")
+//    private Curso curso;
 }

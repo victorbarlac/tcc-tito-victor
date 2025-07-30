@@ -21,7 +21,7 @@ public class AlunoController {
     }
 
     @GetMapping("/{id}")
-    public AlunoDTO listarAluno(@PathVariable Long id) {
+    public AlunoDTO listarAluno(@PathVariable Integer id) {
         return service.listarAluno(id);
     }
 
@@ -36,7 +36,7 @@ public class AlunoController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Long id) {
+    public void deletar(@PathVariable Integer id) {
         service.deletar(id);
     }
 }

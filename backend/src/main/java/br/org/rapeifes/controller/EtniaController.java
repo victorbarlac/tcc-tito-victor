@@ -1,6 +1,6 @@
 package br.org.rapeifes.controller;
 
-import br.org.rapeifes.model.Etnia;
+import br.org.rapeifes.domain.Etnia;
 import br.org.rapeifes.service.EtniaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

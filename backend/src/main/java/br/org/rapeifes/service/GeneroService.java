@@ -1,6 +1,6 @@
 package br.org.rapeifes.service;
 
-import br.org.rapeifes.model.Genero;
+import br.org.rapeifes.domain.Genero;
 import br.org.rapeifes.repository.GeneroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

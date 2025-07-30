@@ -7,8 +7,8 @@ spring:
     changelog: "classpath:db/master.xml"
   datasource:
     url: jdbc:postgresql://localhost:5432/bd-rape
-    username: postgres
-    password: 123
+    username: rape
+    password: senha123
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

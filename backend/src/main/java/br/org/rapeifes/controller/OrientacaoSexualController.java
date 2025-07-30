@@ -1,6 +1,6 @@
 package br.org.rapeifes.controller;
 
-import br.org.rapeifes.model.OrientacaoSexual;
+import br.org.rapeifes.domain.OrientacaoSexual;
 import br.org.rapeifes.service.OrientacaoSexualService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

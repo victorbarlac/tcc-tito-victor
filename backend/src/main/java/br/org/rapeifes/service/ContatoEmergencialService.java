@@ -29,8 +29,8 @@ public class ContatoEmergencialService {
         return mapper.toDto(repository.save(entity));
     }
 
-    public void deletar(Long id) {
-        repository.deleteById(Math.toIntExact(id));
+    public void deletar(Integer id) {
+        repository.deleteById(Long.valueOf(id));
     }
 }
 

@@ -1,7 +1,7 @@
 package br.org.rapeifes.mapper;
 
+import br.org.rapeifes.domain.Aluno;
 import br.org.rapeifes.dto.AlunoDTO;
-import br.org.rapeifes.model.Aluno;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

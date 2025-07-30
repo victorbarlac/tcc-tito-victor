@@ -1,6 +1,6 @@
 package br.org.rapeifes.controller;
 
-import br.org.rapeifes.model.Genero;
+import br.org.rapeifes.domain.Genero;
 import br.org.rapeifes.service.GeneroService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

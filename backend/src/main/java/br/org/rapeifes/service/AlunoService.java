@@ -22,7 +22,7 @@ public class AlunoService {
         return listaAlunoMapper.toDtoList(repository.findAll());
     }
 
-    public AlunoDTO listarAluno(Long id){
+    public AlunoDTO listarAluno(Integer id){
         return alunoMapper.toDto(repository.findById(id).get());
     }
 
@@ -36,7 +36,7 @@ public class AlunoService {
         return alunoMapper.toDto(repository.save(aluno));
     }
 
-    public void deletar(Long id) {
+    public void deletar(Integer id) {
         repository.deleteById(id);
     }
 }

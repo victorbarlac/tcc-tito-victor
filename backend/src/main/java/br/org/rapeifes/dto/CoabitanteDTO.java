@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class CoabitanteDTO {
 
-    private Long id;
+    private Integer id;
 
-    private Long alunoId;
+    private Integer alunoId;
 
     private String descricao;
 }

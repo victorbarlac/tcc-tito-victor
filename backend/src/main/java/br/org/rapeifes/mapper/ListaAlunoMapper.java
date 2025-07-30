@@ -1,7 +1,7 @@
 package br.org.rapeifes.mapper;
 
+import br.org.rapeifes.domain.Aluno;
 import br.org.rapeifes.dto.ListaAlunoDTO;
-import br.org.rapeifes.model.Aluno;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
