@@ -16,11 +16,8 @@ public class Coabitante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "aluno_id", nullable = false)
-    private Integer alunoId;
-
     @ManyToOne
-    @JoinColumn(name = "aluno_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "aluno_id", referencedColumnName = "id")
     private Aluno aluno;
 
     @Column(name = "descricao", nullable = false, length = 255)

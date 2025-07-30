@@ -1,6 +1,7 @@
 package br.org.rapeifes.service;
 
-import br.org.rapeifes.model.ContatoEmergencial;
+import br.org.rapeifes.dto.ContatoEmergencialDTO;
+import br.org.rapeifes.mapper.ContatoEmergencialMapper;
 import br.org.rapeifes.repository.ContatoEmergencialRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,16 +13,24 @@ import java.util.List;
 public class ContatoEmergencialService {
 
     private final ContatoEmergencialRepository repository;
+    private final ContatoEmergencialMapper mapper;
 
-    public List<ContatoEmergencial> listarTodos() {
-        return repository.findAll();
+    public List<ContatoEmergencialDTO> listarTodos() {
+        return mapper.toDtoList(repository.findAll());
     }
 
-    public ContatoEmergencial salvar(ContatoEmergencial contato) {
-        return repository.save(contato);
+    public ContatoEmergencialDTO salvar(ContatoEmergencialDTO dto) {
+        var entity = mapper.toEntity(dto);
+        return mapper.toDto(repository.save(entity));
     }
 
-    public void deletar(Integer alunoId) {
-        repository.deleteById(alunoId);
+    public ContatoEmergencialDTO alterar(ContatoEmergencialDTO dto) {
+        var entity = mapper.toEntity(dto);
+        return mapper.toDto(repository.save(entity));
+    }
+
+    public void deletar(Long id) {
+        repository.deleteById(Math.toIntExact(id));
     }
 }
+

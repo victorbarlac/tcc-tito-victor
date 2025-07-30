@@ -1,6 +1,6 @@
 package br.org.rapeifes.controller;
 
-import br.org.rapeifes.model.ContatoEmergencial;
+import br.org.rapeifes.dto.ContatoEmergencialDTO;
 import br.org.rapeifes.service.ContatoEmergencialService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -8,24 +8,29 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/contatos-emergenciais")
+@RequestMapping("/contato-emergencial")
 @RequiredArgsConstructor
 public class ContatoEmergencialController {
 
     private final ContatoEmergencialService service;
 
     @GetMapping
-    public List<ContatoEmergencial> listar() {
+    public List<ContatoEmergencialDTO> listar() {
         return service.listarTodos();
     }
 
     @PostMapping
-    public ContatoEmergencial salvar(@RequestBody ContatoEmergencial contato) {
+    public ContatoEmergencialDTO salvar(@RequestBody ContatoEmergencialDTO contato) {
         return service.salvar(contato);
     }
 
-    @DeleteMapping("/{alunoId}")
-    public void deletar(@PathVariable Integer alunoId) {
-        service.deletar(alunoId);
+    @PutMapping
+    public ContatoEmergencialDTO alterar(@RequestBody ContatoEmergencialDTO contato) {
+        return service.alterar(contato);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
     }
 }

@@ -13,7 +13,7 @@ public class Etnia {
 
     @Id
     @Column(nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, length = 255)
     private String descricao;

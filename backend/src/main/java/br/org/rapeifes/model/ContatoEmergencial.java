@@ -1,6 +1,5 @@
 package br.org.rapeifes.model;
 
-import br.org.rapeifes.model.Aluno;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,11 +13,11 @@ import lombok.*;
 public class ContatoEmergencial {
 
     @Id
-    @Column(name = "aluno_id")
-    private Integer alunoId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "aluno_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "aluno_id", referencedColumnName = "id")
     private Aluno aluno;
 
     @Column(name = "nome_responsavel", nullable = false, length = 255)

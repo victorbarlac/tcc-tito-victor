@@ -16,7 +16,7 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "aluno_seq")
     @SequenceGenerator(name = "aluno_seq", sequenceName = "aluno_id_seq", allocationSize = 1)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, length = 255)
     private String email;
@@ -41,4 +41,20 @@ public class Aluno {
 
     @Column(name = "acompanhamento_psico_anterior", nullable = false)
     private Boolean acompanhamentoPsicoAnterior;
+
+    @ManyToOne
+    @JoinColumn(name = "etnia_id", referencedColumnName = "id")
+    private Etnia etnia;
+
+    @ManyToOne
+    @JoinColumn(name = "genero_id", referencedColumnName = "id")
+    private Genero genero;
+
+    @ManyToOne
+    @JoinColumn(name = "orientacao_sexual_id", referencedColumnName = "id")
+    private OrientacaoSexual orientacaoSexual;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "curso_id")
+//    private Curso curso;
 }
