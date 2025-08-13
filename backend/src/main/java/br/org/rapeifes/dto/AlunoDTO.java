@@ -25,12 +25,19 @@ public class AlunoDTO {
     private Boolean acompanhamentoPsicoAnterior;
 
     private Integer etniaId;
+
     private String descricaoEtnia;
 
     private Integer generoId;
+
     private String descricaoGenero;
 
     private Integer orientacaoSexualId;
+
     private String descricaoOrientacaoSexual;
+
+    private Integer profissionalId;
+
+    private Integer estadoAcompanhamentoId;
 
 }

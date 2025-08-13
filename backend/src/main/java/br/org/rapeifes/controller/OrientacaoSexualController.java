@@ -12,10 +12,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrientacaoSexualController {
 
-    private final OrientacaoSexualService orientacaoSexualService;
+    private final OrientacaoSexualService service;
 
     @GetMapping
-    public List<OrientacaoSexual> listarEtnias() {
-        return orientacaoSexualService.listarTodas();
+    public List<OrientacaoSexual> listarTodas() {
+        return service.listarTodas();
     }
 }

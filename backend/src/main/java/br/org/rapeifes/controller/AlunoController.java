@@ -16,7 +16,7 @@ public class AlunoController {
     private final AlunoService service;
 
     @GetMapping
-    public List<ListaAlunoDTO> listar() {
+    public List<ListaAlunoDTO> listarTodos() {
         return service.listarTodos();
     }
 

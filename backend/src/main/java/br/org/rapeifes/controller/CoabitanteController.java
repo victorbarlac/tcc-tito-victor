@@ -15,7 +15,7 @@ public class CoabitanteController {
     private final CoabitanteService service;
 
     @GetMapping
-    public List<CoabitanteDTO> listar() {
+    public List<CoabitanteDTO> listarTodos() {
         return service.listarTodos();
     }
 

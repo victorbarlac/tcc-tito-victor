@@ -12,10 +12,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EtniaController {
 
-    private final EtniaService etniaService;
+    private final EtniaService service;
 
     @GetMapping
-    public List<Etnia> listarEtnias() {
-        return etniaService.listarTodas();
+    public List<Etnia> listarTodas() {
+        return service.listarTodas();
     }
 }

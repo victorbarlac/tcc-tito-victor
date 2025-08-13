@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="9" author="victorbarlac">
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Assistente Social"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Auxiliar de Enfermagem"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Pedagoga"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="4"/>
+            <column name="descricao" value="Napne"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="5"/>
+            <column name="descricao" value="Diretora de Ensino"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="6"/>
+            <column name="descricao" value="Professor"/>
+        </insert>
+
+        <insert tableName="encaminhador">
+            <column name="id" valueNumeric="7"/>
+            <column name="descricao" value="Pelos professores, na Reunião Pedagógica"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

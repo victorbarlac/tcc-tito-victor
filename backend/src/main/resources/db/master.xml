@@ -21,5 +21,12 @@
     <include file="changelog/2025-07-28.14_insert_etnia.xml" relativeToChangelogFile="true"/>
     <include file="changelog/2025-07-28.15_insert_genero.xml" relativeToChangelogFile="true"/>
     <include file="changelog/2025-07-28.16_insert_orientacao_sexual.xml" relativeToChangelogFile="true"/>
-
+    <include file="changelog/2025-08-01.17_insert_profissional_saude.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-02.18_insert_medicamento.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-02.19_insert_condicao_diagnosticada.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-09.20_insert_demanda_inicial.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-09.21_insert_encaminhador.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-09.22_insert_encaminhamento.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-09.23_insert_objetivo_intervencao.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2025-08-09.24_insert_tipo_intervencao.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

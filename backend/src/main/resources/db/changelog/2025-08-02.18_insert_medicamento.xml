@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="6" author="victorbarlac">
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="1"/>
+            <column name="nome_substancia" value="Metilfenidato"/>
+            <column name="exemplos_medicamentos" value="Ritalina, Attenze, Concerta"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="2"/>
+            <column name="nome_substancia" value="Lisdexanfetamina"/>
+            <column name="exemplos_medicamentos" value="Venvanse"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="3"/>
+            <column name="nome_substancia" value="Clonazepam"/>
+            <column name="exemplos_medicamentos" value="Rivotril"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="4"/>
+            <column name="nome_substancia" value="Escitalopram"/>
+            <column name="exemplos_medicamentos" value="Lexapro, Exodus, Reconter"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="5"/>
+            <column name="nome_substancia" value="Sertralina"/>
+            <column name="exemplos_medicamentos" value="Zoloft, Assert"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="6"/>
+            <column name="nome_substancia" value="Fluoxetina"/>
+            <column name="exemplos_medicamentos" value="Daforin, Depress"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="7"/>
+            <column name="nome_substancia" value="Amitriptilina"/>
+            <column name="exemplos_medicamentos" value="Amytril"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="8"/>
+            <column name="nome_substancia" value="Valproato de Sódio"/>
+            <column name="exemplos_medicamentos" value="Depakene"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="9"/>
+            <column name="nome_substancia" value="Divalproato de Sódio"/>
+            <column name="exemplos_medicamentos" value="Depakote"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="10"/>
+            <column name="nome_substancia" value="Venlafaxina"/>
+            <column name="exemplos_medicamentos" value="Venlift, Venlaxin"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="11"/>
+            <column name="nome_substancia" value="Desvenlafaxina"/>
+            <column name="exemplos_medicamentos" value="Elifore, Desve, Pristiq"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="12"/>
+            <column name="nome_substancia" value="Risperidona"/>
+            <column name="exemplos_medicamentos" value="Respidon"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="13"/>
+            <column name="nome_substancia" value="Haloperidol"/>
+            <column name="exemplos_medicamentos" value="Aldol"/>
+        </insert>
+        <insert tableName="medicamento">
+            <column name="id" valueNumeric="14"/>
+            <column name="nome_substancia" value="Quetiapina"/>
+            <column name="exemplos_medicamentos" value=""/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>

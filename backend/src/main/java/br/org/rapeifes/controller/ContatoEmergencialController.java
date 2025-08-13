@@ -15,7 +15,7 @@ public class ContatoEmergencialController {
     private final ContatoEmergencialService service;
 
     @GetMapping
-    public List<ContatoEmergencialDTO> listar() {
+    public List<ContatoEmergencialDTO> listarTodos() {
         return service.listarTodos();
     }
 

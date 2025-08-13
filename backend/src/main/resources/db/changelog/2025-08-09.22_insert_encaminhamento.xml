@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="10" author="victorbarlac">
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Agendamento de nova conversa"/>
+        </insert>
+
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Contato com os pais e/ou responsáveis"/>
+        </insert>
+
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Contato com profissional(is) de saúde que acompanham o(a) estudante"/>
+        </insert>
+
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="4"/>
+            <column name="descricao" value="Contato com professor(es) e/ou outro(s) servidor(es) do campus"/>
+        </insert>
+
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="5"/>
+            <column name="descricao" value="Encaminhamento para serviço de saúde"/>
+        </insert>
+
+        <insert tableName="encaminhamento">
+            <column name="id" valueNumeric="6"/>
+            <column name="descricao" value="Encaminhamento para serviço da assistência social"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

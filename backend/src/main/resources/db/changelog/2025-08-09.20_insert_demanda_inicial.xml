@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="insert-demanda-inicial" author="victorbarlac">
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Questões relacionadas à aprendizagem"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Organização de rotina de estudos"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Dificuldades de concentração"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="4"/>
+            <column name="descricao" value="Questões relacionadas à socialização/amizades"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="5"/>
+            <column name="descricao" value="Questões relacionadas a namoro/relações afetivas"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="6"/>
+            <column name="descricao" value="Questões relacionadas a família"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="7"/>
+            <column name="descricao" value="Ansiedade"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="8"/>
+            <column name="descricao" value="Crise de Pânico"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="9"/>
+            <column name="descricao" value="Depressão ou sintomas depressivos"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="10"/>
+            <column name="descricao" value="Autolesão com intenção suicida"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="11"/>
+            <column name="descricao" value="Autolesão sem intenção suicida"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="12"/>
+            <column name="descricao" value="Dificuldades para conciliar o último ano do curso com a preparação para o Enem"/>
+        </insert>
+        <insert tableName="demanda_inicial">
+            <column name="id" valueNumeric="13"/>
+            <column name="descricao" value="Questões relacionadas a gênero e sexualidade"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="11" author="victorbarlac">
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="1"/>
+            <column name="descricao" value="Oferecer apoio afetivo e emocional para a adaptação ao Ifes"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="2"/>
+            <column name="descricao" value="Oferecer apoio afetivo para questões emocionais relacionadas aos processos de aprendizagem"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="3"/>
+            <column name="descricao" value="Fortalecer a relação com os estudos"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="4"/>
+            <column name="descricao" value="Orientar quanto à organização de estudos"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="5"/>
+            <column name="descricao" value="Trabalhar questões de insegurança com relação às disciplinas de Exatas"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="6"/>
+            <column name="descricao" value="Ajudar a elaborar o luto"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="7"/>
+            <column name="descricao" value="Orientar quanto a estratégias de autocuidado"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="8"/>
+            <column name="descricao" value="Oferecer apoio afetivo e emocional para questões de relacionamentos afetivos"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="9"/>
+            <column name="descricao" value="Oferecer adaptações curriculares e institucionais adequadas à sua necessidade"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="10"/>
+            <column name="descricao" value="Oferecer apoio para questões relacionadas ao término do curso e futuro profissional"/>
+        </insert>
+
+        <insert tableName="objetivo_intervencao">
+            <column name="id" valueNumeric="11"/>
+            <column name="descricao" value="Oferecer acolhimento e escuta para questões relacionadas a gênero e sexualidade"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

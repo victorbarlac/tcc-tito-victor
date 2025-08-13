@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="7" author="victorbarlac">
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="1"/><column name="descricao" value="TDAH" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="2"/><column name="descricao" value="Depressão" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="3"/><column name="descricao" value="Ansiedade" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="4"/><column name="descricao" value="Transtorno do Pânico" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="5"/><column name="descricao" value="Dislexia" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="6"/><column name="descricao" value="Esquizofrenia" /></insert>
+        <insert tableName="condicao_diagnosticada"><column name="id" valueNumeric="7"/><column name="descricao" value="Autismo" /></insert>
+    </changeSet>
+</databaseChangeLog>

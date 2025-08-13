@@ -1,21 +1,21 @@
 package br.org.rapeifes.controller;
 
-import br.org.rapeifes.domain.Genero;
-import br.org.rapeifes.service.GeneroService;
+import br.org.rapeifes.domain.Medicamento;
+import br.org.rapeifes.service.MedicamentoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/genero")
+@RequestMapping("/medicamento")
 @RequiredArgsConstructor
-public class GeneroController {
+public class MedicamentoController {
 
-    private final GeneroService service;
+    private final MedicamentoService service;
 
     @GetMapping
-    public List<Genero> listarTodas() {
+    public List<Medicamento> listarTodas() {
         return service.listarTodas();
     }
 }
